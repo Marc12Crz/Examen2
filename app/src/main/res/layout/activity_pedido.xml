@@ -1,0 +1,172 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".PedidoActivity">
+
+
+    <TextView
+        android:id="@+id/tvPedidoTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pedido"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+
+    <ImageView
+        android:id="@+id/iconNombreCliente"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/client"
+        app:layout_constraintTop_toBottomOf="@id/tvPedidoTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvNombreCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre Cliente: "
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="@id/iconNombreCliente"
+        app:layout_constraintBottom_toBottomOf="@id/iconNombreCliente"
+        app:layout_constraintStart_toEndOf="@id/iconNombreCliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp" />
+
+
+    <ImageView
+        android:id="@+id/iconNumeroCliente"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/mobile"
+        app:layout_constraintTop_toBottomOf="@id/iconNombreCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvNumeroCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Número Cliente: "
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="@id/iconNumeroCliente"
+        app:layout_constraintBottom_toBottomOf="@id/iconNumeroCliente"
+        app:layout_constraintStart_toEndOf="@id/iconNumeroCliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp" />
+
+
+    <ImageView
+        android:id="@+id/iconProductos"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/cart"
+        app:layout_constraintTop_toBottomOf="@id/iconNumeroCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvProductos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Productos: "
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="@id/iconProductos"
+        app:layout_constraintBottom_toBottomOf="@id/iconProductos"
+        app:layout_constraintStart_toEndOf="@id/iconProductos"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp" />
+
+
+    <ImageView
+        android:id="@+id/iconUbicacion"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/location"
+        app:layout_constraintTop_toBottomOf="@id/iconProductos"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvUbicacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ubicación: "
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="@id/iconUbicacion"
+        app:layout_constraintBottom_toBottomOf="@id/iconUbicacion"
+        app:layout_constraintStart_toEndOf="@id/iconUbicacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp" />
+
+
+    <Button
+        android:id="@+id/btnLlamar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="LLAMAR"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnWsp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.33"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnWsp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="WSP"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toEndOf="@+id/btnLlamar"
+        app:layout_constraintEnd_toStartOf="@+id/btnMaps"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.33"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnMaps"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="MAPS"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toEndOf="@+id/btnWsp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.33"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
